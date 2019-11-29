@@ -1,7 +1,7 @@
 {
-    "name": "sd-midterm2",
+    "name": "backend",
     "version": "1.0.0",
-    "description": "Parcial 2 - Distribuidos",
+    "description": "Parcial 3 - Distribuidos - Backend",
     "main": "index.js",
     "scripts": {
         "test": "mocha -t 5000 --reporter mochawesome --reporter-options reportDir=report,reportFilename=ApiTesting",
@@ -14,9 +14,9 @@
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/JuanesApps/sd-midterm2/issues"
+        "url": "https://github.com/JuanesApps/SD-midterm3/backend/issues"
     },
-    "homepage": "https://github.com/JuanesApps/sd-midterm2#readme",
+    "homepage": "https://github.com/JuanesApps/SD-midtmer3/backend#readme",
     "dependencies": {
         "auth0-api-jwt-rsa-validation": "0.0.3",
         "body-parser": "^1.19.0",
