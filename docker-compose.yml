@@ -1,0 +1,38 @@
+# la version de docker compose con la que se realiza el archivo
+version: "3"
+#se listan los servicios que se van a desplegar cada srvicio es igual a un container
+services:
+# el primer servicio que despliega es el back-end que lleva como nombre rest-api
+  rest-api:
+    # se le asigna un nombre al container 
+    container_name: rest-api
+  #se especifica que se va a construir el container desde un archivo Dockerfile
+    build: 
+    #se especifica que la ruta del archivo Docker se encuentra en esta carpeta
+      context: ./backend
+      # como el archivo docker file se encuentra en una subcarpeta de la carpeta actual
+      # se especifica la ruta de este archivo.
+      dockerfile: Dockerfile
+      # se realiza el mapeo de puertos el primero corresponde a la maquina anfitriona y el segundo 
+      # al puerto del container
+    ports:
+      - "8082:8082"
+      #se asigna una etiqueta al contenedor 
+    image: rest-api:rest-api
+
+# se realiza el despliegue del container con el front-end 
+  interfaz:
+    container_name: interfaz
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports: 
+      - "8080:8080"
+  # se realiza el despliegue del container del dashboard
+  dashboard:
+    container_name: dashboard
+    build: 
+      context: ./dashboard
+      dockerfile: Dockerfile
+    ports: 
+      - "8081:8081"
