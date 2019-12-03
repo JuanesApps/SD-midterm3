@@ -28,6 +28,7 @@ services:
       dockerfile: Dockerfile
     ports: 
       - "8083:8083"
+    image: my-frontend:my-frontend
 
   # Se realiza el despliegue del container del monitor (dashboard).
   my-monitor:
@@ -37,3 +38,4 @@ services:
       dockerfile: Dockerfile
     ports: 
       - "8084:8084"
+    image: my-monitor:my-monitor

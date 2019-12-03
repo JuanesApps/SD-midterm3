@@ -43,7 +43,7 @@ export default {
         .get(this.backendurl)
         .then(response => {
           // eslint-disable-next-line no-console
-          console.log(response);
+          console.log("BACK " + response.status);
           this.backendstatus = "up";
         })
         .catch(err => {
@@ -61,7 +61,7 @@ export default {
         .catch(err => {
           // eslint-disable-next-line no-console
           console.log(err.response);
-          if(!err.response){
+          if (!err.response) {
             // Error: Network Error
             this.frontendstatus = "down";
           } else {
