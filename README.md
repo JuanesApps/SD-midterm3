@@ -40,11 +40,11 @@ For this exam you should redesing the application developed in midterm 2 into a 
 
 ---
 
-              |   Backend     |   Frontend    |   Monitor    
-              |---------------|---------------|------------
-  PORT        |    8082       |   8083        |   8084
-  LANGUAGE    |   Node.js     |   Node.js     |   Node.js
-  Framework   |   x           |   Vue.js      |   Vue.js
+|              |   Backend     |   Frontend    |   Monitor    |
+|--------------|---------------|---------------|--------------|
+|  PORT        |    8082       |   8083        |   8084       |
+|  LANGUAGE    |   Node.js     |   Node.js     |   Node.js    |
+|  Framework   |   x           |   Vue.js      |   Vue.js     |
 
 ---
 
