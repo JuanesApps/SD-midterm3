@@ -50,7 +50,7 @@ For this exam you should redesing the application developed in midterm 2 into a 
 
 ### README.md auxiliares
 
-Tanto el *Backend* como el *Front* tienen su propio README.md.
+Tanto el *Backend* como el *Frontend* tienen su propio README.md.
 
 ---
 
