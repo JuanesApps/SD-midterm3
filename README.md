@@ -48,7 +48,24 @@ For this exam you should redesing the application developed in midterm 2 into a 
 
 ---
 
+### README.md auxiliares
+
+Tanto el *Backend* como el *Front* tienen su propio README.md.
+
+---
+
 ### Métodos HTTP del API
+
+![Methods](imagenes/openapi/1.png)
+
+---
+
+### Pruebas unitarias de la API
+
+![Openapi](imagenes/reportes/1.png)
+![Openapi](imagenes/reportes/2.png)
+![Openapi](imagenes/reportes/3.png)
+![Openapi](imagenes/reportes/4.png)
 
 ---
 
