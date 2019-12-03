@@ -54,7 +54,7 @@ Tanto el *Backend* como el *Frontend* tienen su propio README.md.
 
 ---
 
-### Métodos HTTP del API
+### Métodos HTTP de la API
 
 ![Methods](imagenes/openapi/1.png)
 
@@ -193,3 +193,40 @@ sudo docker-compose ps
 
 ![DockerFile](imagenes/docker/docker-composePs.png)
 
+---
+
+### Frontend consumiendo Backend
+
+![Deploy](imagenes/deploy/1.png)
+![Deploy](imagenes/deploy/2.png)
+![Deploy](imagenes/deploy/3.png)
+![Deploy](imagenes/deploy/4.png)
+![Deploy](imagenes/deploy/5.png)
+![Deploy](imagenes/deploy/6.png)
+![Deploy](imagenes/deploy/7.png)
+![Deploy](imagenes/deploy/8.png)
+![Deploy](imagenes/deploy/9.png)
+
+---
+
+### Monitor
+
+![Deploy](imagenes/deploy/10.png)
+
+---
+
+### Problemas encontrados - Acciones efectuadas
+
+1. Durante la realización del archivo *docker compose*, se obtuvieron algunos problemas.
+
+Al principio de desplegaban los contenedores sin ningún problema (por línea de comando), pero al momento de realizar la orquestación de los contenedores con el comando *docker compose up*, éste imprimía en consola, que no se encontraban los archivos para copiar al contenedor.Después de volver a construir el archivo el problema se soluciona. No se descubrió cual era el problema, porque al comparar con el archivo docker-compose.yml con el archivo en el repositorio son los mismos. Cabe resaltar que este bug solo apareció algunas veces.
+
+2. Durante el despliegue de los contenedores, se obtuvo un problema con la instalación de docker. Dado que al realizarlo en una máquina virtual, en  el momento de desplegar un contenedor, en la sala 104M este no daba permisos para realizarlo.
+
+La solución fue realizar el despliegue de toda la infraestructura en una máquina virtual con Lubuntu 19.04, en equipo externo al laboratorio de redes, provisto con el hipervisor Proxmox.
+
+3. Hubo problemas de CORS.
+
+En primera instancia al querer que el Frontend consumiera el Backend. La solución fue poner 3 líneas de código (especificadas en el README.md del Backend) en el archivo *app.js* de la carpeta *backend*.
+
+En segunda instancia al querer que el Monitor verificará si el status del Frontend. Aquí el problema es que tanto el Frontend como el Monitor son clientes (Vue), y las políticas de CORS se especifican en un servidor. Se forzaron las políticas en el Frontend para hacer que el Monitor funcionara.
