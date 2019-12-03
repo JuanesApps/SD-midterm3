@@ -1045,4 +1045,40 @@ https://app.swaggerhub.com/apis/CristianMoralesLopez/sd-midterm2/1.0.0#/Desarrol
 
 https://www.youtube.com/watch?v=qHw4OnpXrvc&t=55s
 
+---
 
+### Modificaciones para el parcial 3
+
+Vamos a crear variables de entorno para el puerto donde corre la API, el usuario y la contraseña de MONGO.
+
+Creamos el archivo **.env** y dentro ponemos nuestras variables en mayúscula, "=", valor de la variable.
+
+Ejemplo:
+
+~~~
+SALUDO=holi
+~~~
+
+Después ejecutamos en la terminal:
+
+~~~
+npm i dotenv
+~~~
+
+En el código para llamar las variables.
+
+Primero:
+
+~~~
+require('dotenv').config()
+~~~
+
+Segundo:
+
+~~~
+process.env.SALUDO
+~~~
+
+**Fuente:**
+
+https://www.youtube.com/watch?v=U6st9-lNUyY

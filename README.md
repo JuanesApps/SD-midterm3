@@ -1,3 +1,50 @@
 # Distributed systems third midterm #
 
-Fork this project and send a pull request with the code of third midterm
+**Universidad ICESI**  
+**Course:** Distributed systems  
+**Teacher:** Juan M Álvarez Q.  
+**Topic:** Microservices Architecture design  
+**email:** juan.alvarez8 at correo.icesi.edu.co
+
+### Description
+
+For this exam you should redesing the application developed in midterm 2 into a REST-based microservices arquitecture with a frontend and a health check dashboard. Your aplication must comply the following:
+
+* Must have a github repository which is a fork of the **[sd-mdterm3](https://github.com/ICESI-Training/SD-midterm3)** repository
+* It is suggested to use mlab for data storage: mlab is a database as a service provider for mongo databases.
+* The system must accept HTTP requests from CURL (you can use other REST clients like postman, insomnia or postwoman).
+* The application must have an endpoint to insert data in the database.
+* The application must have an endpoint to retrieve all the registers from a database collection or table.
+* The design must have continous integration and unit tests for all microservices.
+* Microservices must be deployed on containers.
+* Microservices must be orchestrated using docker-compose, docker-swarm or Kubernetes.
+
+## Actividades (EN español para evitar ambigüedades)
+1. Documento README.md en formato markdown:  
+  * Formato markdown (5%).
+  * Nombre y código del estudiante (5%).
+  * Ortografía y redacción (5%).
+2. Documentación del procedimiento para el despliegue de los contenedores. (30%)
+3. Archivos fuentes en el repositorio de la aplicación implementada (15%).
+4. Documentación de las tareas para desplegar la aplicación (20%).
+5. El informe debe publicarse en un repositorio de github el cual debe ser un fork dehttps://github.com/ICESI-Training/SD-midterm3 y para la entrega deberá hacer un Pull Request (PR) al upstream (10%). Tenga en cuenta que el repositorio debe contener todos los archivos necesarios para el despliegue.
+6. Documente algunos de los problemas encontrados y las acciones efectuadas para su solución (10%).
+
+---
+
+## Desarrollo
+
+### Equipo de trabajo:
+* Cristian Alejandro Morales López - A00328064
+* Juan Esteban Quinayás Gaitán - A00027548
+
+---
+
+            |   Backend     |   Frontend    |   Monitor     
+------------|---------------|---------------|------------
+PORT        |    8082       |   8083        |   8084
+LANGUAGE    |   Node.js     |   Node.js     |   Node.js
+Framework   |   x           |   Vue.js      |   Vue.js
+
+---
+

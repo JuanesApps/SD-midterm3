@@ -1,0 +1,39 @@
+# La versión de docker compose con la que se realiza el archivo.
+version: "3"
+# Se listan los servicios que se van a desplegar. Cada servicio es equivalente a un container.
+services:
+# El primer servicio que despliega es el backend.
+  my-backend:
+    # Se le asigna un nombre al container.
+    container_name: my-backend
+    # Se especifica que se va a construir el container desde un archivo Dockerfile.
+    build: 
+    # Se especifica que la ruta del archivo Docker se encuentra en esta carpeta.
+      context: ./backend
+      # Como el archivo Dockerfile se encuentra en una subcarpeta de la carpeta actual
+      # se especifica la ruta de este archivo.
+      dockerfile: Dockerfile
+      # Se realiza el mapeo de puertos el primero corresponde a la máquina anfitriona y el segundo 
+      # al puerto del container.
+    ports:
+      - "8082:8082"
+      # Se asigna una etiqueta al contenedor 
+    image: my-backend:my-backend
+
+# Se realiza el despliegue del container con el frontend.
+  my-frontend:
+    container_name: my-frontend
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports: 
+      - "8083:8083"
+
+  # Se realiza el despliegue del container del monitor (dashboard).
+  my-monitor:
+    container_name: my-monitor
+    build: 
+      context: ./monitor
+      dockerfile: Dockerfile
+    ports: 
+      - "8084:8084"

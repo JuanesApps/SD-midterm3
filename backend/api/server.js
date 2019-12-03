@@ -1,7 +1,7 @@
 const http = require('http')
 const app = require('./app')
-const port = 8082
+require('dotenv').config()
 
 const server = http.createServer(app)
 
-server.listen(port)
+server.listen(process.env.APP_PORT)
