@@ -6,12 +6,6 @@
           <v-card class="px-5 py-5 my-5">
             <v-card-title>Monitor</v-card-title>
             <v-data-table :headers="headers" :items="table" hide-default-footer class="elevation-1">
-              <template v-slot:item.backendstatus="{ item }">
-                <v-chip :color="getColorBack(item.backstatus)" dark>{{ item.backstatus }}</v-chip>
-              </template>
-              <template v-slot:item.frontendstatus="{ item }">
-                <v-chip :color="getColorFront(item.frontstatus)" dark>{{ item.frontstatus }}</v-chip>
-              </template>
             </v-data-table>
           </v-card>
         </div>
@@ -79,20 +73,10 @@ export default {
         // eslint-disable-next-line no-console
         console.log(this.table);
       }
-    },
-    getColorBack(backstatus) {
-      if (backstatus == "up") return "green";
-      else return "red";
-    },
-    getColorFront(frontstatus) {
-      if (frontstatus == "up") return "green";
-      else return "red";
     }
   },
   mounted() {
     this.checkstatus();
-    this.getColorBack();
-    this.getColorFront();
   }
 };
 </script>
