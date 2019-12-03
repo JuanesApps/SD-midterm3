@@ -123,7 +123,7 @@ Para este contenedor se proceden con los mismos pasos utilizados en el *Backend*
 
 Se crea el *Dockerfile*.
 
-![DockerFile](imagenes/docker/dockerfileFrontend.png)
+![DockerFile](imagenes/docker/DockerfileFrontend.png)
 
 Se ejecuta el comando:
 
